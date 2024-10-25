@@ -2,17 +2,17 @@
 
 def sort_numbers_from_file
     begin
-      numbers_text = File.read('numbers.txt')
+        numbers_text = File.read('numbers.txt')
       
-      numbers = numbers_text.split(',').map(&:strip).map(&:to_i)
+        numbers = numbers_text.split(',').map(&:strip).map(&:to_i)
       
-      sorted_numbers = numbers.sort
+        sorted_numbers = numbers.sort
       
-      sorted_numbers.each { |num| puts num }
+        sorted_numbers.each { |num| puts num }
     rescue Errno::ENOENT
-      puts "Error: numbers.txt file not found"
+        puts "Error: numbers.txt file not found"
     rescue => e
-      puts "Error: #{e.message}"
+        puts "Error: #{e.message}"
     end
 end
   

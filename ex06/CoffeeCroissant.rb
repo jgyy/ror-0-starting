@@ -1,34 +1,23 @@
 #!/usr/bin/env ruby
 
-def convert_to_hash
-    data = [['Caleb' , 24],
-            ['Calixte' , 84],
-            ['Calliste', 65],
-            ['Calvin' , 12],
-            ['Cameron' , 54],
-            ['Camil' , 32],
-            ['Camille' , 5],
-            ['Can' , 52],
-            ['Caner' , 56],
-            ['Cantin' , 4],
-            ['Carl' , 1],
-            ['Carlito' , 23],
-            ['Carlo' , 19],
-            ['Carlos' , 26],
-            ['Carter' , 54],
-            ['Casey' , 2]]
+def display_sorted_names
+    data = [
+        ['Frank', 33],
+        ['Stacy', 15],
+        ['Juan' , 24],
+        ['Dom' , 32],
+        ['Steve', 24],
+        ['Jill' , 24]
+    ]
 
-    hash = {}
-    data.each do |name, age|
-        hash[age] = name
-    end
+    sorted_data = data.sort_by { |person| [person[1], person[0]] }
 
-    hash.each do |age, name|
-        puts "#{age} : #{name}"
+    sorted_data.each do |person|
+        puts person[0]
     end
 end
   
-convert_to_hash
+display_sorted_names
 
 =begin
 <?php
