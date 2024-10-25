@@ -1,34 +1,35 @@
-# Training PHP Symfony - 0
-## Starting
+# Ruby on Rails Training - 0: Starting
 
-Summary: Today, you will learn about the basics of the PHP Programming Language.
+**Summary**: Let's leave the web domain behind and focus on the ruby and this language's syntactic and semantic basics.
+
+This module is achievable with Ruby version 3.2  
 Version: 1.2
 
 ## Contents
-- I Foreword
-- II General rules
-- III Day-specific rules
-- IV Exercise 00
-- V Exercise 01
-- VI Exercise 02
-- VII Exercise 03
-- VIII Exercise 04
-- IX Exercise 05
-- X Exercise 06
-- XI Submission and peer-evaluation
+1. [Preamble](#preamble)
+2. [General rules](#general-rules)
+3. [Today's specific instructions](#todays-specific-instructions)
+4. [Exercise 00: Classy not classy](#exercise-00-classy-not-classy)
+5. [Exercise 01: Breakfast](#exercise-01-breakfast)
+6. [Exercise 02: With Hash browns](#exercise-02-with-hash-browns)
+7. [Exercise 03: Where am I?](#exercise-03-where-am-i)
+8. [Exercise 04: Backward](#exercise-04-backward)
+9. [Exercise 05: Hal](#exercise-05-hal)
+10. [Exercise 06: Wait a minute](#exercise-06-wait-a-minute)
+11. [Exercise 07: elm](#exercise-07-elm)
+12. [Submission and peer-evaluation](#submission-and-peer-evaluation)
 
-## Chapter I: Foreword
+## Preamble
 
-Some wise quotes from the past:
-> 640K ought to be enough for anybody.
-> 
-> Computers in the future may weigh no more than 1.5 tons.
-> 
-> We will never make a 32-bit operating system.
-> 
-> Spam will be a thing of the past in two years' time.
+Besides being great, Ruby is fun!
 
-## Chapter II: General rules
+* Poignant Guide To Ruby
+* TryRuby
+* RubyMonk
+* Rubyquizz
+* RubyWarrior
+
+## General rules
 
 * Your project must be realized in a virtual machine.
 * Your virtual machine must have all the necessary software to complete your project. These softwares must be configured and installed.
@@ -40,212 +41,242 @@ Some wise quotes from the past:
 * We encourage you to create test programs for your project even though this work won't have to be submitted and won't be graded. It will give you a chance to easily test your work and your peers' work. You will find those tests especially useful during your defence. Indeed, during defence, you are free to use your tests and/or the tests of the peer you are evaluating.
 * Submit your work to your assigned git repository. Only the work in the git repository will be graded. If Deepthought is assigned to grade your work, it will be done after your peer-evaluations. If an error happens in any section of your work during Deepthought's grading, the evaluation will stop.
 
-## Chapter III: Day-specific rules
+> **Important**: For obvious security reasons, any credentials, API keys, env variables etc... must be saved locally in a .env file and ignored by git. Publicly stored credentials will lead you directly to a failure of the project.
 
-If no other explicit information is displayed, you must assume the following versions of languages:
+## Today's specific instructions
 
-* PHP - Symfony LTS
-* HTML 5
-* CSS 3
+* Every submitted file must have an appropriate shebang line and include the warning flag
+* Avoid having code in the global scope. Use functions instead!
+* Each submitted file should conclude with a function call.
+* Imports are not allowed, except for those specified in the "Authorized functions" section of each exercise description.
 
-## Chapter IV: Exercise 00
+## Exercise 00: Classy not classy
 
-### Exercise 00: Var
-**Turn-in directory:** ex00/  
-**Files to turn in:** var.php  
-**Allowed functions:**
+**Turn-in directory**: `ex00/`  
+**Files to turn in**: `var.rb`  
+**Allowed functions**: n/a
 
-Create a file named var.php, containing four variables a, b, c and d. At runtime, your progam initializes those variables and produces the following output:
+Create a script named `var.rb` in which you will define a `my_var` function. In this function, declare and assign 4 different types variables and print them on the standard output. You must precisely recreate the following output:
 
-```bash
-# > php var.php
-My first variables:
-a contains : 10 and has type : integer
-b contains : 10 and has type : string
-c contains : ten and has type : string
-d contains : 10 and has type : double
-# >
+```
+$> ./var.rb
+my variables :
+a contains: 10 and is a type: Integer
+b contains: 10 and is a type: String
+c contains: nil and is a type: NilClass
+d contains: 10.0 and is a type: Float
+$>
 ```
 
-You are not allowed to hard-code your variables' types in this program. Changing the values (and only the values) of a, b, c or d must change the output in a significant way.
+Of course, explicitly stating the variable types in your code prints is prohibited.
+Also, don't forget to call your function at the end of your script as mentioned in the instructions.
 
-## Chapter V: Exercise 01
+## Exercise 01: Breakfast
 
-### Exercise 01: CSV
-**Turn-in directory:** ex01/  
-**Files to turn in:** csv.php  
-**Allowed functions:**
+**Turn-in directory**: `ex01/`  
+**Files to turn in**: `croissant.rb`  
+**Allowed functions**: n/a
 
-Create a csv.php file that will read a ex01.txt file, available in the same directory (and also available in the resources of this project).
+For this exercise, you are free to define as many functions as you like and name them as you see fit.
 
-The text file contains values separated by commas. Your program will read the content of this file and display each value on a new line.
+The tarball named `d01.tar.gz` in the appendix of this subject contains a subfolder named `ex01/`. Inside that folder, you'll find the file `numbers.txt` which contains random numbers from 1 to 100 separated by commas.
 
-```bash
-# > cat ex01.txt
-first,second,third,fourth
-# > php csv.php
-first
-second
-third
-fourth
-# >
+Your task is to design a Ruby script named `croissant.rb` that opens the `numbers.txt` file, reads the numbers and displays them on the standard output, one per line, in ascending order without commas.
+
+The command to extract a tarball is: `tar xzf d01.tar.gz`
+
+## Exercise 02: With Hash browns
+
+**Turn-in directory**: `ex02/`  
+**Files to turn in**: `H2o.rb`  
+**Allowed functions**: n/a
+
+Create a script named `H2o.rb` and copy the following data couples table as it in into one of your functions:
+
+```ruby
+data = [['Caleb' , 24],
+['Calixte' , 84],
+['Calliste', 65],
+['Calvin' , 12],
+['Cameron' , 54],
+['Camil' , 32],
+['Camille' , 5],
+['Can' , 52],
+['Caner' , 56],
+['Cantin' , 4],
+['Carl' , 1],
+['Carlito' , 23],
+['Carlo' , 19],
+['Carlos' , 26],
+['Carter' , 54],
+['Casey' , 2]]
 ```
 
-## Chapter VI: Exercise 02
+Write the code that, when executed, declares and converts it into a hash with Integer as the key and the String(s) as the value. Display a message on the console as follows:
 
-### Exercise 02: Old times
-**Turn-in directory:** ex02/  
-**Files to turn in:** array2hash.php  
-**Allowed functions:**
-
-Create an array2hash function that takes an array, containing one or more arrays, as argument. These arrays contain a name string and an age integer each.
-
-array2hash converts this array of arrays in a hash where keys are ages and values are names.
-
-Example:
-```php
-#> cat test02.php
-<?php
-include('./array2hash.php');
-$array = array(array("Pierre","30"), array("Mary","28"));
-print_r ( array2hash($array) );
-#> php test02.php
-Array
-(
-    [30] => Pierre
-    [28] => Mary
-)
 ```
-
-## Chapter VII: Exercise 03
-
-### Exercise 03: Sorted times
-**Turn-in directory:** ex03/  
-**Files to turn in:** array2hash_sorted.php  
-**Allowed functions:**
-
-Create an array2hash_sorted function that takes an array, containing one or more arrays, as argument. These arrays contain a name string and an age integer each.
-
-The array2hash_sorted function should convert this array of arrays into an associative array (or hash) where the keys are the names and the values are the corresponding ages. The resulting hash must be sorted by the keys (names) in reverse alphabetical order.
-
-Example:
-```php
-#> cat test03.php
-<?php
-include('./array2hash_sorted.php');
-$array = array(array("Pierre","30"), array("Mary","28"), array("Nelly", "22"));
-print_r ( array2hash_sorted($array) );
-#> php test03.php
-Array
-(
-    [Pierre] => 30
-    [Nelly] => 22
-    [Mary] => 28
-)
-```
-
-## Chapter VIII: Exercise 04
-
-### Exercise 04: States & Capitals
-**Turn-in directory:** ex04/  
-**Files to turn in:** capital_city_from.php  
-**Allowed functions:**
-
-Using the following arrays, write a capital_city_from function that takes as argument the name of a state and returns its capital city. If the capital city doesn't exist, it returns "Unknown".
-
-```php
-#> cat capital_city_from.php
-<?php
+$> ./H2o.rb
+24 : Caleb
+84 : Calixte
+65 : Calliste
+12 : Calvin
 [...]
-$states = [
-    'Oregon' => 'OR',
-    'Alabama' => 'AL',
-    'New Jersey' => 'NJ',
-    'Colorado' => 'CO',
-];
-$capitals = [
-    'OR' => 'Salem',
-    'AL' => 'Montgomery',
-    'NJ' => 'trenton',
-    'KS' => 'Topeka',
-];
-[...]
-#> cat test04.php
-<?php
-include('./capital_city_from.php');
-echo capital_city_from('Oregon');
-echo capital_city_from('Origan');
-#> php test04.php
-Salem
-Unknown
+$>
 ```
 
-## Chapter IX: Exercise 05
+## Exercise 03: Where am I?
 
-### Exercise 05: Searching states or capitals
-**Turn-in directory:** ex05/  
-**Files to turn in:** search_by_states.php  
-**Allowed functions:**
+**Turn-in directory**: `ex03/`  
+**Files to turn in**: `Where.rb`  
+**Allowed functions**: n/a
 
-Using the same arrays as in the previous exercise, create a search_by_states function that takes a string, composed of one of more state names or capital names, as an argument.
+Using the following hashes (you should copy them into a function):
 
-The string should use a comma (,) as the separator, and there may be spaces around the separators, at the beginning, or at the end of the string.
-
-This function will return an array of strings formated like this:
-
-```php
-# > cat test05.php
-<?php
-include('./search_by_states.php');
-$results = search_by_states("Oregon, trenton, Topeka, NewJersey");
-foreach ($results as $result)
-{
-    echo $result . "\n";
+```ruby
+states = {
+  "Oregon" => "OR",
+  "Alabama" => "AL",
+  "New Jersey" => "NJ",
+  "Colorado" => "CO"
 }
-# > php test05.php
-Salem is the capital of Oregon.
-trenton is the capital of New Jersey.
-Topeka is neither a capital nor a state.
-NewJersey is neither a capital nor a state.
-# >
+
+capitals_cities = {
+  "OR" => "Salem",
+  "AL" => "Montgomery",
+  "NJ" => "Trenton",
+  "CO" => "Denver"
+}
 ```
 
-## Chapter X: Exercise 06
+Write the program that takes "State" (e.g., Oregon) as an argument and displays its capital city in the standard output (e.g., Salem). If the argument does not yield any result, your script should display: Unknown state. If there are no arguments or too many arguments, your script should exit without reacting.
 
-### Exercise 06: Mendeleiev table
-**Turn-in directory:** ex06/  
-**Files to turn in:** mendeleiev.php  
-**Allowed functions:**
+```
+$> ./Where.rb Oregon
+Salem
+$> ./Where.rb toto
+Unknown state
+$> ./Where.rb
+$> ./Where.rb Oregon Alabama
+$> ./Where.rb Oregon Alabama Ile-De-France
+$>
+```
 
-Create a program that opens the ex06.txt file that contains the Mendeleiev table, formated in a specific way. This program will create the file mendeleiev.html that will contain the HTML code of the Mendeleiev table with the data included in ex06.txt, following these rules:
+## Exercise 04: Backward
 
-* Each element should be a cell of an HTML table
-* The title should be inside an h4 tag
-* The attributes should be inside an HTML list
-* You should respect the general format of the Mendeleiev table, eg empty cells, new rows etc.
+**Turn-in directory**: `ex04/`  
+**Files to turn in**: `erehW.rb`  
+**Allowed functions**: n/a
 
-You can find some Mendeleiev tables easily on the Internet.
+You have the same hashes as in the previous exercise. Create a program that takes a capital city as an argument and displays de matching State. Your program must behave identically to the previous exercise.
 
-Sample output:
+```
+$> ./erehW.rb Salem
+Oregon
+$> ./erehW.rb toto
+Unknown capital city
+$> ./erehW.rb
+$>
+```
+
+## Exercise 05: Hal
+
+**Turn-in directory**: `ex05/`  
+**Files to turn in**: `whereto.rb`  
+**Allowed functions**: n/a
+
+Using the same hashes as in the ex03, write a program similar to previous exercises, with the following modifications:
+
+* The program should take a string containing as an argument, which can contain multiple words separated by commas.
+* For each word in the string, the program should detect whether it is a capital city or a State.
+* Case sensitivity and spaces should not be considered.
+* If there are no parameters or too many parameters, the program should not display anything.
+* If there are two consecutive commas in the string, the program should not display anything.
+* The program should display the results with each results on a new line using the following specific format:
+
+```
+$> ./whereto.rb "Salem , ,Alabama, Toto , ,MontGOmery"
+Salem is the capital of Oregon (akr: OR)
+Montgomery is the capital of Alabama (akr: AL)
+Toto is neither a capital city nor a state
+Montgomery is the capital of Alabama (akr: AL)
+$>
+```
+
+## Exercise 06: Wait a minute
+
+**Turn-in directory**: `ex06/`  
+**Files to turn in**: `CoffeeCroissant.rb`  
+**Allowed functions**: n/a
+
+Using the following table:
+
+```ruby
+data = [
+  ['Frank', 33],
+  ['Stacy', 15],
+  ['Juan' , 24],
+  ['Dom' , 32],
+  ['Steve', 24],
+  ['Jill' , 24]
+]
+```
+
+Write the code that displays only the names, sorted in ascending order by age and alphabetically when ages are the same, line by line.
+
+```
+$> ./CoffeeCroissant.rb
+Stacy
+Jill
+Juan
+Steve
+Dom
+Frank
+$>
+```
+
+> Note: The hash's data change during evaluation to verify that the task has been completed correctly.
+
+## Exercise 07: elm
+
+**Turn-in directory**: `ex07/`  
+**Files to turn in**: `elm.rb`  
+**Allowed functions**: n/a
+
+The `d01.tar.gz` tarball in the appendix of this contains a subfolder named `ex07/`. Inside this folder, you'll find a file named `periodic_table.txt`, which describes the periodic table of elements in a programmer-friendly format.
+
+Create a program that uses this file to generate an HTML page representing the periodic table of elements in a correct format.
+
+Here are the requirements:
+
+* Each element should be displayed in a 'box' withing the HTML table.
+* The name of an element should be displayed as level 4 heading.
+* The attributes of an element should be presented as a list. This list should include at least the atomic number, symbol and atomic mass.
+* You will need to refer to the layout of a Mendeleïev table on platforms like Google for proper alignment. Ensure there are empty boxes where necessary and include appropriate line breaks when needed.
+
+Your program should generate the `periodic_table.html` result file. This HTML file must be readable by any browser and should comply with W3C standards.
+
+Feel free to design your program according to your preferences. It is recommended to break your code into specific functionalities that can be potentially reused. You can customize your hashes with an "inline" CSS style to enhance the appearance of your table, such as styling the table's borders. You can even generate a separate `periodic_table.css` file to style the table if you prefer.
+
+Here is an output excerpt that will give you a better idea of what is expected:
+
 ```html
+[...]
 <table>
 <tr>
 <td style="border: 1px solid black; padding:10px">
-    <h4>Hydrogen</h4>
-    <ul>
-        <li>No 42</li>
-        <li>H</li>
-        <li>1.00794</li>
-        <li>1 electron</li>
-    </ul>
+<h4>Hydrogen</h4>
+<ul>
+<li>No 1</li>
+<li>H</li>
+<li>1.00794</li>
+<li>1 electron</li>
+</ul>
 </td>
 [...]
 ```
 
-Feel free to customize it however you see fit to make it look fancier ;)
-
-## Chapter XI: Submission and peer-evaluation
+## Submission and peer-evaluation
 
 Turn in your assignment in your Git repository as usual. Only the work inside your repository will be evaluated during the defense. Don't hesitate to double check the names of your folders and files to ensure they are correct.
 
-**The evaluation process will happen on the computer of the evaluated group.**
+> Note: The evaluation process will happen on the computer of the evaluated group.
