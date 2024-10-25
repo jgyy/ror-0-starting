@@ -1,10 +1,10 @@
 <?php
 
-if (!file_exists('ex01.txt')) {
-    die("Error: ex01.txt file not found\n");
+if (!file_exists('numbers.txt')) {
+    die("Error: numbers.txt file not found\n");
 }
 
-$content = file_get_contents('ex01.txt');
+$content = file_get_contents('numbers.txt');
 
 $content = trim($content);
 
