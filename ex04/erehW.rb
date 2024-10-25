@@ -19,13 +19,11 @@ def find_state_by_capital(capital)
     return "Unknown capital city" if state_abbrev.nil?
   
     states.each do |state_name, abbrev|
-      return state_name if abbrev == state_abbrev
+        return state_name if abbrev == state_abbrev
     end
 end
   
-if ARGV.length == 1
-    puts find_state_by_capital(ARGV[0])
-end
+puts find_state_by_capital(ARGV[0]) if ARGV.length == 1
 
 =begin
 <?php
