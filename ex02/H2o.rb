@@ -43,18 +43,7 @@ convert_to_hash
         }
         return $result;
     }
-
-    function array2hash_sorted($array) {
-        $result = array();
-        foreach ($array as $item) {
-            if (count($item) >= 2) {
-                $name = $item[0];
-                $age = $item[1];
-                $result[$name] = $age;
-            }
-        }
-        krsort($result);
-        return $result;
-    }
+    $array = array(array("Pierre","30"), array("Mary","28"));
+    print_r ( array2hash($array) );
 ?>
 =end

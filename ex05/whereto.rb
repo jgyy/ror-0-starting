@@ -84,7 +84,6 @@ search_location(ARGV[0]) if ARGV.length == 1
         }
         return $results;
     }
-
     $results = search_by_states("Oregon, trenton, Topeka, NewJersey");
     foreach ($results as $result) {
         echo $result . "\n";

@@ -55,5 +55,7 @@ find_capital(ARGV[0])
         }
         return $capitals[$state_code] . "\n";
     }
+    echo capital_city_from('Oregon');
+    echo capital_city_from('Origan');
 ?>
 =end

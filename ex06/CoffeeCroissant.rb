@@ -21,18 +21,6 @@ display_sorted_names
 
 =begin
 <?php
-    function array2hash($input_array) {
-        $result = array();
-        foreach ($input_array as $pair) {
-            if (count($pair) >= 2) {
-                $name = $pair[0];
-                $age = $pair[1];
-                $result[$age] = $name;
-            }
-        }
-        return $result;
-    }
-
     function array2hash_sorted($array) {
         $result = array();
         foreach ($array as $item) {
@@ -45,5 +33,7 @@ display_sorted_names
         krsort($result);
         return $result;
     }
+    $array = array(array("Pierre","30"), array("Mary","28"), array("Nelly", "22"));
+    print_r ( array2hash_sorted($array) );
 ?>
 =end
